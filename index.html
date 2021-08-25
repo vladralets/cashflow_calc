@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор дохода</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' href='main.css'>
+    <link rel='stylesheet' type='text/css' href='jqueryUi/jquery-ui.theme.min.css'>
+    <link rel='stylesheet' type='text/css' href='jqueryUi/jquery-ui.min.css'>
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <h1>Калькулятор дохода</h1>
+        <div class="inputs-block">
+            <div class="inputs-block-column">
+                <h6>Доход в месяц</h6>
+                <div class="inputs-wrapper">
+                    <input
+                            type="number"
+                            placeholder="Зарплата"
+                            id="income-salary"
+                    >
+                    <input
+                            type="number"
+                            placeholder="Фриланс"
+                            id="income-freelance"
+                    >
+                    <input
+                            type="number"
+                            placeholder="Доп. доход"
+                            id="income-extra-1"
+                    >
+                    <input
+                            type="number"
+                            placeholder="Доп. доход"
+                            id="income-extra-2"
+                    >
+                </div>
+            </div>
+            <div class="inputs-block-column">
+                <h6>Обязательные расходы</h6>
+                <div class="inputs-wrapper">
+                    <input
+                            type="number"
+                            placeholder="Аренда квартиры"
+                            id="costs-flat"
+                    >
+                    <input
+                            type="number"
+                            placeholder="ЖКХ"
+                            id="costs-house-services"
+                    >
+                    <input
+                            type="number"
+                            placeholder="Транспорт"
+                            id="costs-transport"
+                    >
+                    <input
+                            type="number"
+                            placeholder="Кредиты"
+                            id="costs-credit"
+                    >
+                </div>
+            </div>
+            <div class="inputs-block-column">
+                <div class="total-numb">
+                    <h6>Доступно в месяц:</h6>
+                    <input
+                            type="number"
+                            class="total"
+                            id="total-month"
+                            value="0"
+                            readonly
+                    >
+                </div>
+                <div class="total-numb">
+                    <h6>Доступно в день:</h6>
+                    <input
+                            type="number"
+                            class="total"
+                            id="total-day"
+                            value="0"
+                            readonly>
+                </div>
+                <div class="total-numb">
+                    <h6>Накопим за год:</h6>
+                    <input
+                            type="number"
+                            class="total"
+                            id="total-year"
+                            value="0"
+                            readonly>
+                </div>
+            </div>
+        </div>
+        <div class="range-block">
+            <h6>Копилка (Сколько откладываем?)</h6>
+            <div class="range-wrapper">
+                <div id="slider-range"></div>
+                <div class="slider-range-result">
+                    <input type="text" id="precent" readonly>
+                </div>
+            </div>
+        </div>
+        <div class="result-block">
+            <div class="total-numb">
+                <h6>Копим:</h6>
+                <input
+                       type="number"
+                       id="accumulation"
+                       value="0"
+                       readonly
+                >
+            </div>
+            <div class="total-numb">
+                <h6>Тратим:</h6>
+                <input type="number" id="spend" value="0" readonly>
+            </div>
+        </div>
+    </div>
+
+
+<script src="jqueryUi/jquery-3.4.1.min.js"></script>
+<script src="jqueryUi/jquery-ui.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
